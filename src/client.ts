@@ -26,7 +26,6 @@ class MugshotClient {
 		const response = await fetch(url, {
 			method: 'POST',
 			headers: {
-				'Content-Type': 'multipart/form-data',
 				Authorization: this.apiKey,
 				'User-Agent': 'Mugshot-SDK/1.0.0',
 			},
@@ -49,7 +48,6 @@ class MugshotClient {
 		const response = await fetch(url, {
 			method: 'POST',
 			headers: {
-				'Content-Type': 'multipart/form-data',
 				Authorization: this.apiKey,
 				'User-Agent': 'Mugshot-SDK/1.0.0',
 			},
@@ -72,7 +70,6 @@ class MugshotClient {
 		const response = await fetch(url, {
 			method: 'POST',
 			headers: {
-				'Content-Type': 'multipart/form-data',
 				Authorization: this.apiKey,
 				'User-Agent': 'Mugshot-SDK/1.0.0',
 			},
@@ -119,7 +116,6 @@ class MugshotClient {
 			headers: {
 				Authorization: this.apiKey,
 				'User-Agent': 'Mugshot-SDK/1.0.0',
-				'Content-Type': 'application/x-www-form-urlencoded',
 			},
 			body: formData.toString(),
 		});
