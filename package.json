@@ -1,0 +1,21 @@
+{
+	"name": "mugshot-js",
+	"version": "1.0.0",
+	"type": "module",
+	"description": "Javascript/Typescript SDK for Mugshot.dev API",
+	"main": "src/client.ts",
+	"types": "src/client.types.ts",
+	"keywords": [
+		"face-recognition",
+		"recognition",
+		"face",
+		"mugshot"
+	],
+	"author": "codenoid",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^20.11.19",
+		"prettier": "^3.2.5",
+		"typescript": "^5.3.3"
+	}
+}
