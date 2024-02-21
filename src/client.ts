@@ -3,7 +3,7 @@ import {
 	SearchFaceResponse,
 	MatchFaceResponse,
 	DeleteFaceResponse,
-} from './client.types';
+} from './client.d';
 
 class MugshotClient {
 	private apiKey: string;

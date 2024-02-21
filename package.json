@@ -3,8 +3,13 @@
 	"version": "1.0.4",
 	"type": "module",
 	"description": "Javascript/Typescript SDK for Mugshot.dev API",
-	"main": "src/client.ts",
-	"types": "src/client.types.ts",
+	"main": "dist/client.js",
+	"types": "dist/client.d.js",
+	"scripts": {
+		"build": "tsc",
+		"copy": "copyfiles -f src/client.d.ts dist",
+		"format": "prettier --write ."
+	},
 	"keywords": [
 		"face-recognition",
 		"recognition",
@@ -15,7 +20,8 @@
 	"license": "ISC",
 	"devDependencies": {
 		"@types/node": "^20.11.19",
+		"copyfiles": "^2.4.1",
 		"prettier": "^3.2.5",
 		"typescript": "^5.3.3"
-	}
+	},
 }

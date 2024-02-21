@@ -27,58 +27,59 @@ yarn add mugshot-js
 ### Using the library in browser
 
 ```javascript
-import { MugshotClient } from "mugshot-js";
+import {MugshotClient} from 'mugshot-js';
 
-const client = new MugshotClient("YOUR_API_KEY");
+const client = new MugshotClient('YOUR_API_KEY');
 
-document.getElementById('fileInput').addEventListener('change', async function(event) {
-    const file = event.target.files[0];
-    const metadata = { name: "John Doe" };
+document
+	.getElementById('fileInput')
+	.addEventListener('change', async function (event) {
+		const file = event.target.files[0];
+		const metadata = {name: 'John Doe'};
 
-    try {
-        const response = await client.addFace(file, metadata);
-        console.log(response);
-    } catch (error) {
-        console.error(error);
-    }
-});
+		try {
+			const response = await client.addFace(file, metadata);
+			console.log(response);
+		} catch (error) {
+			console.error(error);
+		}
+	});
 ```
 
 ### Using the library in Edge Environment
 
 ```javascript
-import { MugshotClient } from "mugshot-js";
+import {MugshotClient} from 'mugshot-js';
 
-const client = new MugshotClient("YOUR_API_KEY");
+const client = new MugshotClient('YOUR_API_KEY');
 
 const payload = await request.formData();
-const file = payload.get("image");
-const metadata = { name: "John Doe" };
+const file = payload.get('image');
+const metadata = {name: 'John Doe'};
 
 try {
-    const response = await client.addFace(file, metadata);
-    console.log(response);
+	const response = await client.addFace(file, metadata);
+	console.log(response);
 } catch (error) {
-    console.error(error);
+	console.error(error);
 }
 ```
 
 ### Using the library with NodeJS
 
-
 ```javascript
-import { MugshotClient } from "mugshot-js";
+import {MugshotClient} from 'mugshot-js';
 
-const client = new MugshotClient("YOUR_API_KEY");
+const client = new MugshotClient('YOUR_API_KEY');
 
 const payload = await request.formData();
-const file = fs.openAsBlob("person-image.jpg");
-const metadata = { name: "John Doe" };
+const file = fs.openAsBlob('person-image.jpg');
+const metadata = {name: 'John Doe'};
 
 try {
-    const response = await client.addFace(file, metadata);
-    console.log(response);
+	const response = await client.addFace(file, metadata);
+	console.log(response);
 } catch (error) {
-    console.error(error);
+	console.error(error);
 }
 ```
